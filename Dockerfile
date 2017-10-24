@@ -3,7 +3,7 @@ FROM docker:latest
 ENV PATH /google-cloud-sdk/bin:$PATH
 
 RUN apk update && \
-    apk add jq wget bash python git openssh gettext && \
+    apk add jq wget bash python git openssl gettext && \
     rm -rf /var/cache/apk/* && \
     wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --no-check-certificate && \
     tar zxvf google-cloud-sdk.tar.gz && \
